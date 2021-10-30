@@ -1,3 +1,10 @@
+<%-- 
+    Document   : registro
+    Created on : 30/10/2021, 6:19:09 p. m.
+    Author     : ALEXIS FONSECA
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -23,8 +30,8 @@
 
                 <div class="mb-3">
 
-                  <label for="Documento" class="form-label">Tipo de docuemnto</label>
-                  <select class="form-select" aria-label="Default select example" name="Documento" id="Documento">
+                  <label for="Documento" class="form-label">Tipo de documento</label>
+                  <select class="form-select" aria-label="Default select example" name="Documento" id="Documento" required="">
                     <option selected>Selecciona un opción</option>
                     <option value="1">Cédula de ciudadanía</option>
                     <option value="2">Cédula de extranjería</option>
@@ -36,7 +43,7 @@
 
                 <div class="mb-3">
                   <label for="numero" class="form-label">Número de documento</label>
-                  <input type="number" class="form-control" id="number" name="number">
+                  <input type="number" class="form-control" id="number" name="number" required="">
                 </div>
 
                 <div class="form-group">
@@ -72,35 +79,37 @@
 
                 <div class="mb-3">
                   <label for="usuario" class="form-label">Ingrese su usuario</label>
-                  <input type="text" class="form-control" id="usuario" name="usuario">
+                  <input type="text" class="form-control" id="usuario" name="usuario" required="">
                 </div>
 
                 <div class="mb-3">
                   <label for="email" class="form-label">Ingrese su email</label>
-                  <input type="email" class="form-control" id="email" name="email">
+                  <input type="email" class="form-control" id="email" name="email" required="">
                 </div>
 
                 <div class="mb-3">
                   <label for="fn" class="form-label">Fecha de nacimiento</label>
-                  <input type="date" class="form-control" id="fn" name="fn">
+                  <input type="date" class="form-control" id="fn" name="fn" required="">
                 </div>
 
                 <div class="mb-3">
-                  <label for="contraseña" class="form-label">Contraseña</label>
-                  <input type="password" class="form-control" id="contraseña" name="contraseña">
+                  <label for="contrasena" class="form-label">Contraseña</label>
+                  <input type="password" class="form-control" id="contrasena" name="contrasena" onkeyup="coincidir()">
                 </div>
 
                 <div class="mb-3">
-                  <label for="ValidarContraseña" class="form-label">Confimar contraseña</label>
-                  <input type="password" class="form-control" id="ValidarContraseña" name="ValidarContraseña">
+                  <label for="ValidarContrasena" class="form-label">Confimar contraseña</label>
+                  <input type="password" class="form-control" id="ValidarContrasena" name="ValidarContrasena" onkeyup="coincidir()">
                 </div>
 
                 <br>
                 <br>
+                <label class="form-label" id="aviso"></label>
 
-                <label class="form-label" id="aviso">------</label>
+                <br>
+                <br>
 
-                <button type="submit" class="btn btn-primary" id="boton">Registrarse</button>
+                <button type="submit" class="btn btn-primary" id="Registrar" disabled="">Registrarse</button>
 
                 
               </form>
@@ -108,6 +117,7 @@
         </main>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+        <script src="javascript/java.js"></script>
     </body>
 
 </html>
